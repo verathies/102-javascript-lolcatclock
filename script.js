@@ -83,3 +83,47 @@ updateClock();
 var oneSecond=1000;
 
 var  setInterval (updateClock, oneSecond);
+
+
+// party Time button here 
+
+var partyTimeButton = document.getElementById("partyTimeButton");
+var isPartyTime = false;
+ 
+var partyEvent = function() {
+ 
+   if (isPartyTime === false) {
+      isPartyTime = true;
+      time = partyTime;
+      partyTimeButton.innerText = "PARTY TIME!";
+      partyTimeButton.style.backgroundColor = "#222";
+   } else {
+      isPartyTime = false;
+      time = new Date().getHours();
+      partyTimeButton.innerText = "PARTY OVER";
+      partyTimeButton.style.backgroundColor = "#0A8DAB";
+   }
+};
+partyTimeButton.addEventListener('click', partyEvent);
+
+
+// add Time selectors for wakeup, lunch, nap 
+
+var wakeUpTimeSelector= document.getElementById("wakeUpTimeSelector");
+var lunchTimeSelector= document.getElementById("lunchTimeSelector"); 
+var napTimeSelector=document.getElementById("napTimeSelector");
+
+var wakeUpEvent = function (){
+	wakeupTime=wakeUpTimeSelector.value; 
+};
+var lunchTimeEvent = function (){
+  lunchTime=lunchTimeSelector.value; 
+};
+var napTimeEvent= function (){
+  napTime= napTimeSelector.value; 
+};
+
+wakeUpTimeSelector.addEventListener('change', wakeUpEvent);
+lunchTimeSelector.addEventListener('change',lunchTimeEvent);
+napTimeSelector.addEventListener('change',napTimeEvent);
+
