@@ -95,13 +95,13 @@ var partyEvent = function() {
    if (isPartyTime === false) {
       isPartyTime = true;
       time = partyTime;
-      partyTimeButton.innerText = "PARTY TIME!";
-      partyTimeButton.style.backgroundColor = "#222";
+      partyTimeButton.innerText = "PARTY OVER";
+      partyTimeButton.style.backgroundColor = "#0A8DAB";
    } else {
       isPartyTime = false;
       time = new Date().getHours();
-      partyTimeButton.innerText = "PARTY OVER";
-      partyTimeButton.style.backgroundColor = "#0A8DAB";
+      partyTimeButton.innerText = "PARTY TIME!";
+      partyTimeButton.style.backgroundColor = "#222";
    }
 };
 partyTimeButton.addEventListener('click', partyEvent);
