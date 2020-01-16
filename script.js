@@ -82,7 +82,7 @@ var showCurrentTime = function()
 updateClock();
 var oneSecond=1000;
 
-var  setInterval (updateClock, oneSecond);
+setInterval (updateClock, oneSecond);
 
 
 // party Time button here 
